@@ -85,6 +85,8 @@ void MainApp::selectFile() {
     }
     auto *document = new QPdfDocument();
     document->load(fileName);
+    const QString &title = document->metaData(QPdfDocument::MetaDataField::Title).toString();
+    setWindowTitle(title);
     qPdfView->setDocument(document);
     qPdfView->setPageMode(QPdfView::PageMode::MultiPage);
 }
