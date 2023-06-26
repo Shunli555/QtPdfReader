@@ -8,11 +8,13 @@
 #include "QVBoxLayout"
 #include "QHBoxLayout"
 #include "QRadioButton"
-
+#include "QPdfView"
+#include "QPushButton"
 
 class MainApp : public QWidget {
 public:
     MainApp();
+    ~MainApp();
 
 private:
     QToolBar *mToolbar;
@@ -22,9 +24,10 @@ private:
     QRadioButton *singlePageMode;
     QRadioButton *doublePageMode;
 
-    QWidget *selectFileButton;
-    QWidget *appendixButton;
-    QWidget *bookmarksButton;
+    QPushButton *selectFileButton;
+    QPushButton *appendixButton;
+    QPushButton *bookmarksButton;
+    QPdfView *qPdfView;
 
     void initSlots();
 

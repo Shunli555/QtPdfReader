@@ -12,12 +12,14 @@ find_package(Qt6 COMPONENTS
         Gui
         Widgets
         Pdf
+        PdfWidgets
         REQUIRED)
 
-add_executable(QtPdfReader main.cpp src/MainApp.cpp src/MainApp.h)
+add_executable(QtPdfReader src/main.cpp src/MainApp.cpp src/MainApp.h)
 target_link_libraries(QtPdfReader
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        Qt6::Pdf)
+        Qt6::Pdf
+        Qt6::PdfWidgets)
 
